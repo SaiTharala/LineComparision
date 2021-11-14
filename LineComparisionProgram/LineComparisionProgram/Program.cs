@@ -1,16 +1,17 @@
 ﻿using System;
-namespace LineComparisonComputation
+
+namespace LineComparison
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Line Comparison Computation Progam");
-            LineComparison lineOne = new LineComparison(1.5, 2.5, 3.5, 4.5);
-            double lengthOne = lineOne.LengthCalc();
+            Console.WriteLine("Welcome Line Comparison Computation Program");
+            LineCalculation lineOne = new LineCalculation(23.0, 28.0, 14.0, 18.0);
+            double lengthOne = lineOne.LengthCalculate();
             Console.WriteLine("The length of the first line is {0}", lengthOne);
-            LineComparison lineTwo = new LineComparison(2.5, 9.5, 7.5, 5.5);
-            double lengthTwo = lineTwo.LengthCalc();
+            LineCalculation lineTwo = new LineCalculation(13.0, 19.0, 20.0, 11.0);
+            double lengthTwo = lineTwo.LengthCalculate();
             Console.WriteLine("The length of the second line is {0}", lengthTwo);
             lineTwo.Check(lengthOne, lengthTwo);
         }
